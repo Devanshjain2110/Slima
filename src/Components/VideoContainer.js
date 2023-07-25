@@ -8,7 +8,6 @@ export const VideoContainer = () => {
   const getVideos = async () => {
     const data = await fetch(Youtube_Video_Api);
     const json = await data.json();
-    console.log(json);
     setVideos(json.items);
   };
   useEffect(() => {
@@ -19,8 +18,8 @@ export const VideoContainer = () => {
     <div className="flex flex-wrap">
       {videos.map((video) => {
         return (
-          <Link to={"/watch?v=" + video.id}>
-            <VideoCard key={video.id} info={video} />
+          <Link key={video.id} to={"/watch?v=" + video.id}>
+            <VideoCard  info={video} />
           </Link>
         );
       })}

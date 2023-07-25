@@ -7,12 +7,8 @@ export const ButtonList = () => {
         <div className="flex ">
             {list.map((listItem, index) => {
               return  <Button name={listItem} key={index}/>
-            })
-}
-            {/* <Button name="All"/>
-            <Button name="Gaming"/>
-            <Button name="Music"/>
-            <Button name="Live"/> */}
+            })}
+
         </div>
     )
 }

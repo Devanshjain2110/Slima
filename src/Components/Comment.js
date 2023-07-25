@@ -2,8 +2,8 @@ import UserIcon from "../Items/user-icon.svg";
 
 const CommentList = ({ comments }) => {
   return comments.map((comm, index) => (
-    <div>
-      <Comment key={index} data={comm} />
+    <div key={index}>
+      <Comment  data={comm} />
       <div className="pl-5 border border-l-black ml-5">
         <CommentList comments={comm.replies} />
       </div>
